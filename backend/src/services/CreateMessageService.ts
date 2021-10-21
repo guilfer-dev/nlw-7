@@ -27,7 +27,7 @@ class CreateMessageService {
             }
         }
 
-        io.emit("new_message", infoWS);
+        io.emit("new-message", infoWS);
 
         return message;
     }

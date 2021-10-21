@@ -10,17 +10,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*"
+        origin: process.env.CORS_ORIGIN
     }
-});
-
-io.on("connection", socket => {
-    console.log(socket.id)
 });
 
 app.use(cors());
 app.use(express.json());
 app.use(router);
-
 
 export { server, io }
