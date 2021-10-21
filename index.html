@@ -17,7 +17,7 @@
         function getLastMessages() {
             const req = new XMLHttpRequest();
             req.responseType = 'json';
-            req.open("GET", "http://localhost:3333/messages/last3", true);
+            req.open("GET", "https://nextlevelweek7-guilfer.herokuapp.com/messages/last3", true);
             req.send();
             req.onload = () => {
                 const messages = req.response;
